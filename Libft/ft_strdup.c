@@ -1,37 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvieira <lvieira@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/14 13:55:40 by lvieira           #+#    #+#             */
-/*   Updated: 2021/02/18 19:30:03 by lvieira          ###   ########.fr       */
+/*   Created: 2021/02/22 20:52:00 by lvieira           #+#    #+#             */
+/*   Updated: 2021/02/22 22:52:10 by lvieira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *find_in, const char *to_find, size_t lenght)
+char	*ft_strdup(const char *s1)
 {
+	char	*copy;
 	size_t	i;
-	size_t	j;
 
 	i = 0;
-	j = 0;
-	if (*to_find == '\0')
-		return ((char*)find_in);
-	while (find_in[i] && (i < lenght))
+	copy = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1));
+	if (!copy)
+		return (NULL);
+	while (s1[i])
 	{
-		j = 0;
-		while ((find_in[i + j] == to_find[j])
-			&& (j < lenght) && to_find[j] != '\0')
-		{
-			j++;
-			if (to_find[j] == '\0')
-				return ((char*)(&find_in[i]));
-		}
+		copy[i] = s1[i];
 		i++;
 	}
-	return (0);
+	copy[i] = '\0';
+	return (copy);
 }

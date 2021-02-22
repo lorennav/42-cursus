@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvieira <lvieira@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lvieira <lvieira@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/11 22:47:53 by lvieira           #+#    #+#             */
-/*   Updated: 2021/02/12 23:28:49 by lvieira          ###   ########.fr       */
+/*   Updated: 2021/02/18 19:26:20 by lvieira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,5 +22,5 @@ int	ft_strncmp(const char *str1, const char *str2, size_t n)
 		str2++;
 		n--;
 	}
-	 return (*(unsigned char*) str1 - *(unsigned char*) str2);
+	return (*(unsigned char*)str1 - *(unsigned char*)str2);
 }

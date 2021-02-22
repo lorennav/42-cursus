@@ -1,37 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvieira <lvieira@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/14 13:55:40 by lvieira           #+#    #+#             */
-/*   Updated: 2021/02/18 19:30:03 by lvieira          ###   ########.fr       */
+/*   Created: 2021/02/18 19:27:48 by lvieira           #+#    #+#             */
+/*   Updated: 2021/02/22 19:58:24 by lvieira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnstr(const char *find_in, const char *to_find, size_t lenght)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t	i;
-	size_t	j;
+	size_t	index;
+	size_t	src_i;
 
-	i = 0;
-	j = 0;
-	if (*to_find == '\0')
-		return ((char*)find_in);
-	while (find_in[i] && (i < lenght))
+	index = ft_strlen(dst);
+	src_i = 0;
+	while (src[src_i] && index < dstsize - 1 && dstsize != 0)
 	{
-		j = 0;
-		while ((find_in[i + j] == to_find[j])
-			&& (j < lenght) && to_find[j] != '\0')
-		{
-			j++;
-			if (to_find[j] == '\0')
-				return ((char*)(&find_in[i]));
-		}
-		i++;
+		dst[index] = src[src_i];
+		index++;
+		src_i++;
 	}
-	return (0);
+	if (dstsize != 0)
+		dst[index] = '\0';
+	while (src[src_i])
+	{
+		index++;
+		src_i++;
+	}
+	if (dstsize < ft_strlen(dst))
+		return (dstsize + src_i);
+	return (index);
 }

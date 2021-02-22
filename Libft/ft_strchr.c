@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvieira <lvieira@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lvieira <lvieira@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 17:53:50 by lvieira           #+#    #+#             */
-/*   Updated: 2021/02/17 19:24:27 by lvieira          ###   ########.fr       */
+/*   Updated: 2021/02/18 19:27:07 by lvieira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strchr(const char *s, int c)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i] != '\0')
