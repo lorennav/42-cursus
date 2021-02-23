@@ -6,7 +6,7 @@
 /*   By: lvieira <lvieira@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/22 23:44:28 by lvieira           #+#    #+#             */
-/*   Updated: 2021/02/22 23:57:17 by lvieira          ###   ########.fr       */
+/*   Updated: 2021/02/23 00:00:36 by lvieira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ void	ft_putstr_fd(char *s, int fd)
 	size_t	length;
 
 	if (!s)
-		return;
+		return ;
 	length = ft_strlen(s);
 	write(fd, s, length);
 }
