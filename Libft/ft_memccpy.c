@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvieira <lvieira@student.42lisboa.com>     +#+  +:+       +#+        */
+/*   By: lvieira <lvieira@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/16 22:20:01 by lvieira           #+#    #+#             */
-/*   Updated: 2021/02/18 19:28:38 by lvieira          ###   ########.fr       */
+/*   Updated: 2021/02/24 18:18:05 by lvieira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,8 @@ void	*ft_memccpy(void *dst, const void *src, int c, size_t n)
 	{
 		dst_cpy[index] = src_cpy[index];
 		if ((unsigned char)src_cpy[index] == (unsigned char)c)
-			return ((char *)dst + index);
+			return ((char *)dst + index + 1);
 		index++;
 	}
-	return (NULL);
+	return (0);
 }

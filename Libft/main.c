@@ -157,5 +157,18 @@ char s[] = "Hellooo";
 
 	substr = ft_substr(str, 3, 6);
 	printf("%s\n", substr);
+
+	 int i = 4356;
+    int b = -3521;
+    int c = -2147483648;
+
+    ft_putnbr_fd(i, 1);
+    ft_putnbr_fd(b, 1);
+    ft_putnbr_fd(c, 1);
+
+	char *hello = "Hello World";
+    ft_putendl_fd(hello, 1);
+    ft_putstr_fd(hello, 1);
+	
     return 0;
 }
