@@ -6,7 +6,7 @@
 /*   By: lvieira <lvieira@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/17 16:50:02 by lvieira           #+#    #+#             */
-/*   Updated: 2021/02/18 19:29:45 by lvieira          ###   ########.fr       */
+/*   Updated: 2021/02/24 22:52:08 by lvieira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	size_t	index;
 
 	index = 0;
+	if (!src)
+		return (0);
 	if (dstsize != 0)
 	{
 		while (src[index] != '\0' && dstsize > 1)

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvieira <lvieira@student.42.fr>            +#+  +:+       +#+        */
+/*   By: lvieira <lvieira@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/24 15:23:10 by lvieira           #+#    #+#             */
-/*   Updated: 2021/02/24 18:00:23 by lvieira          ###   ########.fr       */
+/*   Updated: 2021/02/24 23:07:22 by lvieira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,10 @@ char	    *ft_strrchr(const char *s, int c);
 char    	*ft_substr(char const *s, unsigned int start, size_t len);
 void	    ft_putstr_fd(char *s, int fd);
 void	    *ft_calloc(size_t count, size_t size);
-char		*ft_strtrim(char const *s1, char const *set);
+char			*ft_strtrim(char const *s1, char const *set);
+void			ft_putendl_fd(char *s, int fd);
+void			ft_putnbr_fd(int n, int fd);
+
 
 
 
