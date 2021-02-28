@@ -6,7 +6,7 @@
 /*   By: lvieira <lvieira@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/18 19:03:19 by lvieira           #+#    #+#             */
-/*   Updated: 2021/02/25 23:22:12 by lvieira          ###   ########.fr       */
+/*   Updated: 2021/02/27 20:12:13 by lvieira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	ft_atoi(const char *str)
 {
 	long long int		number;
 	long long int		sign;
-	size_t	i;
+	size_t				i;
 
 	i = 0;
 	number = 0;

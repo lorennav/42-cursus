@@ -6,7 +6,7 @@
 /*   By: lvieira <lvieira@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/22 23:08:25 by lvieira           #+#    #+#             */
-/*   Updated: 2021/02/25 23:21:11 by lvieira          ###   ########.fr       */
+/*   Updated: 2021/02/27 20:14:56 by lvieira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,12 @@ static int	in_set(char c, const char *set)
 	return (0);
 }
 
-char				*ft_strtrim(char const *s1, char const *set)
+char		*ft_strtrim(char const *s1, char const *set)
 {
-	int			start;
-	int			end;
-	char		*strtrim;
-	int			i;
+	int		start;
+	int		end;
+	char	*strtrim;
+	int		i;
 
 	start = 0;
 	end = ft_strlen(s1) - 1;

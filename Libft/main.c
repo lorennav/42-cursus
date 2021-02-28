@@ -169,6 +169,18 @@ char s[] = "Hellooo";
 	char *hello = "Hello World";
     ft_putendl_fd(hello, 1);
     ft_putstr_fd(hello, 1);
-	
-    return 0;
+
+    const char s[] = "   palavra palavra2  palavra3";
+    int a, i;
+    char **arr_strs;
+
+    arr_strs = ft_split(s, ' ');
+
+
+    for(i = 0; i < 4; i++)
+	{	
+  	 printf("\n Element is %s", arr_strs[i]);
+	}
+    return(0);
+
 }
