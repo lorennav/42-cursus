@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lvieira <lvieira@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 14:07:59 by lvieira           #+#    #+#             */
-/*   Updated: 2021/04/14 22:13:19 by lvieira          ###   ########.fr       */
+/*   Updated: 2021/04/14 22:13:54 by lvieira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 
 /* 
 ** This funtion will read a line and saving accordingly to the Buffer size given
@@ -89,8 +89,8 @@ static int	store_in_line(char **saving, char **line)
 
 /* 
 ** Get_next_line will read a file line by line whenever it is called. A line is defined
-** untill it reaches a '\n'. Since the read depends on the Buffer Size given (allocate mem with malloc for buf), 
-** there will be times the buffer of the reading will have a line break between. To store it in the *line  
+** untill it reaches a '\n'. Since the read depends on the Buffer Size given, there will
+** times the buffer of the reading will have a line break between. To store it in the *line  
 ** in the right way, we will have to store the rest of the buffer into the static variable.
 ** The output will depend on the result of the reading function.
 ** If there is nothing to save from the reading, it will add an empty string to the line.
