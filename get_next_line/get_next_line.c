@@ -3,19 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   get_next_line.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lvieira <lvieira@student.42lisboa.com>     +#+  +:+       +#+        */
+/*   By: lvieira <lvieira@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/10 14:07:59 by lvieira           #+#    #+#             */
-/*   Updated: 2021/04/14 22:13:19 by lvieira          ###   ########.fr       */
+/*   Updated: 2021/04/16 16:58:45 by lvieira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line.h"
 
 /* 
-** This funtion will read a line and saving accordingly to the Buffer size given
-** and it will store in the saving static variable. If saving is NULL, we copy the
-** buffer to it. If it is not, we join what was already on saving with buf.
+** This funtion will read a line and saving accordingly to the Buffer 
+** size given and it will store in the saving static variable.
+** If saving is NULL, we copy the buffer to it. 
+** If it is not, we join what was already on saving with buf.
 ** We stop whenever saving has a line break.
 */
 
@@ -45,17 +46,19 @@ static int	read_line_store_in_saving(int fd, char *buf, char **saving)
 	return (rd);
 }
 
-/* 
-**This funtion will store everything that is stored in saving in line until the line 
-**break. First, we will check if there is a line break or not in saving, if there is 
-**no line break, *line will be equal to the result of the reading stored in saving.
-** Else, we see in saving its lenght before reaches the newline and the end of the
-** string. Then, we will copy saving until this lenght. We will store the rest after the
-** line break on a temporary variable, we will free the space in saving and store there 
+/*
+** This funtion will store everything that is stored in saving in line
+** until the line break. First, we will check if there is a line break
+** or not in saving, if there is no line break, *line will be equal to the result
+** of the reading stored in saving. Else, we see in saving its lenght
+** before reaches the newline and the end of the string. Then, we will copy
+** saving until this lenght. We will store the rest after the line break
+** on a temporary variable, we will free the space in saving and store there 
 ** what was on the temp var, in order to have it safe on the next function call.
-** We will free saving if it is null or  a line and saving accordingly to the Buffer size given
-** and it will store in the saving static variable. If saving is NULL, we copy the
-** buffer to it. If it is not, we join what was already on saving with buf.
+** We will free saving if it is null or  a line and saving accordingly
+** to the Buffer size given and it will store in the saving static variable.
+** If saving is NULL, we copy the  buffer to it.
+** If it is not, we join what was already on saving with buf.
 ** We stop whenever saving has a line break.
 */
 
@@ -87,13 +90,15 @@ static int	store_in_line(char **saving, char **line)
 	}
 }
 
-/* 
-** Get_next_line will read a file line by line whenever it is called. A line is defined
-** untill it reaches a '\n'. Since the read depends on the Buffer Size given (allocate mem with malloc for buf), 
-** there will be times the buffer of the reading will have a line break between. To store it in the *line  
-** in the right way, we will have to store the rest of the buffer into the static variable.
+/* Get_next_line will read a file line by line whenever it is called. 
+** A line is defined untill it reaches a '\n'. Since the read depends
+** on the Buffer Size given (allocate mem with malloc for buf), 
+** there will be times the buffer of the reading will have a line break between. 
+** To store it in the *line in the right way, we will have to store the rest
+**  of the buffer into the static variable.
 ** The output will depend on the result of the reading function.
-** If there is nothing to save from the reading, it will add an empty string to the line.
+** If there is nothing to save from the reading, it will add an empty 
+** string to the line.
 */
 
 int	get_next_line(int fd, char **line)
