@@ -6,7 +6,7 @@
 /*   By: lvieira <lvieira@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/16 19:31:32 by lvieira           #+#    #+#             */
-/*   Updated: 2021/06/16 19:31:42 by lvieira          ###   ########.fr       */
+/*   Updated: 2021/06/29 18:59:20 by lvieira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stdarg.h>
 # include <unistd.h>
-# include "../libft/libft.h"
+# include <stdio.h>
+# include "./libft/libft.h"
 
 #endif
