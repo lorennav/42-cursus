@@ -1,23 +1,23 @@
-# include "libft.h"
+#include "libft.h"
 
 int	ft_putnbr_base(unsigned long n, char *base)
 {
-	unsigned int	baseLength;
-	int				numLength;
+	unsigned int	base_len;
+	int				n_len;
 
-	numLength = 1;
-	baseLength = ft_strlen(base);
+	n_len = 1;
+	base_len = ft_strlen(base);
 	if (n == 0)
 	{
 		write(1, "0", 1);
-		return (numLength);
+		return (n_len);
 	}
-	if (n >= baseLength)
+	if (n >= base_len)
 	{
-		numLength += ft_putnbr_base(n / baseLength, base);
-		write(1, &base[n % baseLength], 1);
+		n_len += ft_putnbr_base(n / base_len, base);
+		write(1, &base[n % base_len], 1);
 	}
-	else if (n < baseLength)
+	else if (n < base_len)
 		write(1, &base[n], 1);
-	return (numLength);
+	return (n_len);
 }
