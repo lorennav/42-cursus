@@ -6,7 +6,7 @@
 /*   By: lvieira <lvieira@student.42lisboa.com>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/26 22:57:20 by lvieira           #+#    #+#             */
-/*   Updated: 2021/07/29 20:02:59 by lvieira          ###   ########.fr       */
+/*   Updated: 2021/08/03 22:46:26 by lvieira          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	print_s(va_list *args, t_format *format)
 	char	*s;
 
 	s = va_arg(*args, char *);
+	if (!s)
+		s = "(null)";
 	ft_putstr_fd(s, 1);
 	format->length += ft_strlen(s);
 }
